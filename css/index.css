@@ -1,0 +1,984 @@
+.main {
+    min-height: 100vh;
+    padding: 0 var(--basic-padding);
+}
+
+.content-banner {
+    height: var(--page-height);
+    margin: 0 calc(-1 * var(--basic-padding));
+    position: relative;
+    overflow: hidden;
+}
+  
+  .banner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}  
+
+.floating {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #608DFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
+.floating p {
+    margin: 0;
+    color: white;
+    font-size: 21px;
+}
+
+.content-banner .banner-01,
+.content-banner .banner-02,
+.content-banner .banner-03,
+.content-banner .banner-04,
+.content-banner .banner-05,
+.content-banner .banner-06,
+.content-banner .banner-07,
+.content-banner .banner-08,
+.content-banner .banner-09,
+.content-banner .banner-10,
+.content-banner .banner-11 {
+  position: absolute;
+  pointer-events: none;
+}
+
+.content-banner .banner-01 {
+  top: 9%;
+  left: 14%;
+  width: 33%;
+}
+
+.content-banner .banner-02 {
+  top: 67%;
+  left: 60%;
+  width: 8%;
+}
+
+.content-banner .banner-03 {
+  top: 15%;
+  left: 43%;
+  width: 19%;
+}
+
+.content-banner .banner-04 {
+  top: 71%;
+  left: 53%;
+  width: 5%;
+}
+
+.content-banner .banner-05 {
+  top: 72%;
+  left: 27%;
+  width: 17%;
+}
+
+.content-banner .banner-06 {
+  top: 9%;
+  left: 62%;
+  width: 20%;
+}
+
+.content-banner .banner-07 {
+  top: 54%;
+  left: 77%;
+  width: 4%;
+}
+
+.content-banner .banner-08 {
+  top: 43%;
+  left: 74%;
+  width: 16%;
+}
+
+.content-banner .banner-09 {
+  top: 1%;
+  left: 1%;
+  width: 16%;
+}
+
+.content-banner .banner-10 {
+  top: 60%;
+  left: 13%;
+  width: 9%;
+}
+
+.content-banner .banner-11 {
+  top: 65%;
+  left: 58%;
+  width: 27%;
+}
+
+.content-about {
+    position: relative;
+    width: 100%;
+    padding: 120px 0 140px;
+    overflow: hidden;
+    background: #fff;
+}
+
+  /* 내부 래퍼 — 지그재그 아이템 컨테이너 */
+  .about-inner {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+  /* ---- 공통 아이템 ---- */
+  .about-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 320px;
+}
+
+  /* M — 좌측 */
+  .about-item--make {
+    justify-content: flex-start;
+    padding-left: 6%;
+}
+
+  /* S — 우측 */
+  .about-item--share {
+    justify-content: flex-end;
+    padding-right: 6%;
+    margin-top: -60px;
+}
+
+  /* G — 좌측 */
+  .about-item--gather {
+    justify-content: flex-start;
+    padding-left: 6%;
+    margin-top: -60px;
+}
+
+  /* ---- 빛번짐 원형 데코 ---- */
+  .about-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+  /* M 뒤 — deco-circle-01 (보라) */
+  .about-item--make .about-circle {
+    width: 340px;
+    height: 340px;
+    background: url('/image/index/deco-circle-01.png') center / cover no-repeat;
+    top: 50%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+}
+
+  /* S 뒤 — deco-circle-02 (노랑) */
+  .about-item--share .about-circle {
+    width: 320px;
+    height: 320px;
+    background: url('/image/index/deco-circle-02.png') center / cover no-repeat;
+    top: 50%;
+    right: 14%;
+    left: auto;
+    transform: translate(50%, -50%);
+}
+
+  /* G 뒤 — deco-circle-03 (파랑) */
+  .about-item--gather .about-circle {
+    width: 340px;
+    height: 340px;
+    background: url('/image/index/deco-circle-03.png') center / cover no-repeat;
+    top: 50%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+}
+
+  /* ---- 3D 글자 이미지 ---- */
+  .about-logo {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+  .about-logo img {
+    display: block;
+    width: 220px;
+    height: auto;
+}
+
+  /* ---- 텍스트 그룹 ---- */
+  .about-text {
+    font-family: 'GMarketSans';
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-left: 28px;
+}
+
+  /* SHARE 아이템은 텍스트가 글자 왼쪽 */
+  .about-item--share .about-text {
+    margin-left: 0;
+    margin-right: 28px;
+    order: -1;
+    text-align: right;
+}
+
+  .about-text .word-en {
+    font-size: clamp(28px, 3.5vw, 82px);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: #747474;
+    line-height: 1;
+}
+
+  .about-text .word-ko {
+    font-size: clamp(12px, 1.2vw, 26px);
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    color: #747474;
+    margin-left: 5px;;
+}
+
+.content-desc {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.content-desc h2 {
+  font-family: 'GMarketSans';
+  font-size: 46px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #424242;
+  margin-bottom: 40px;
+}
+
+.content-desc p {
+  font-family: 'GMarketSans';
+  font-size: 24px;
+  line-height: 1.9;
+  color: #9e9e9e;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  z-index: 0;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 6px;
+  height: 0.55em;
+  background: #93C2FF;
+  z-index: -1;
+  border-radius: 2px;
+}
+
+.project-title {
+  margin-top: 400px;
+  font-family: 'GMarketSans';
+  font-weight: 500;
+  font-size: 48px;
+  color: #608DFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper {
+  width: 100%;
+  margin-top: 9.5vh;
+  margin-bottom: 25vh;
+  overflow: visible;            
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: none !important;
+}
+
+.img-main {
+  width: 820px;
+  height: 680px;
+  object-fit: contain;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-side {
+  position: absolute;
+  width: 560px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+
+.swiper-slide-active {
+  z-index: 3;
+}
+
+.swiper-slide-active .img-main {
+  opacity: 1;
+}
+
+.swiper-slide-active .img-side {
+  opacity: 0;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  z-index: 1;
+}
+
+.swiper-slide-prev .img-main,
+.swiper-slide-next .img-main {
+  opacity: 0;
+}
+
+.swiper-slide-prev .img-side,
+.swiper-slide-next .img-side {
+  opacity: 0.55;
+}
+
+.swiper-slide-prev .img-side {
+  left: -520px;
+}
+
+.swiper-slide-next .img-side {
+  right: -520px;
+}
+
+.swiper-content {
+  font-family: 'GMarketSans';
+  margin-top: 26px;
+  text-align: center;
+  position: static;
+}
+
+.swiper-slide .slide-grade,
+.swiper-slide .slide-title {
+  display: none;
+}
+
+.swiper-slide-active .slide-grade,
+.swiper-slide-active .slide-title {
+  display: block;
+}
+
+.swiper-slide:not(.swiper-slide-active) .slide-content {
+  display: none;
+}
+
+
+/* 텍스트 스타일 */
+.slide-grade {
+  color: #b0b0b0;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.slide-title {
+  color: #424242;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.slide-content {
+  color: #b0b0b0;
+  font-weight: 400;
+  font-size: 20px;
+  white-space: nowrap;      /* 한 줄 유지 */
+  line-height: 1.6;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: auto !important;
+  bottom: 44px !important;
+  width: 19px;
+  height: 38px;
+  color: #608DFF;
+  z-index: 5;
+}
+
+.swiper-button-prev {
+  left: calc(50% - 260px) !important;
+}
+
+.swiper-button-next {
+  right: calc(50% - 260px) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 22px !important;
+  font-weight: 1;
+}
+
+.activity{
+  width: 100%;
+  padding: 70px 0 90px;   /* ✅ 좌우 padding 제거 */
+  background: #fff;
+}
+
+.activity_wrap{
+  width: 100%;
+  max-width: 1200px;      /* ✅ 헤더 컨테이너랑 같은 값 */
+  margin: 0 auto;         /* ✅ 중앙 컨테이너(대부분 헤더도 이런 구조) */
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 60px;
+  row-gap: 40px;
+}
+
+/* LEFT */
+.activity_left{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin-left: -30px;
+}
+
+.activity_label{
+  font-family: 'GMarketSans';
+  font-size: 48px;
+  font-weight: 500;
+  color: #608DFF;
+  margin-bottom: 26px;
+}
+
+.activity_year{
+  font-family: 'GMarketSans';
+  font-size: 24px;
+  font-weight: 400;
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.activity_titleRow{
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 14px;
+}
+
+.activity_title{
+  font-family: 'GMarketSans';
+  font-size: 64px;
+  font-weight: 400;
+  color: #424242;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.activity_line{
+  flex: 1;
+  height: 3px;
+  background: #000000;
+  opacity: 0.55;
+  transform: translateY(6px);
+}
+
+.activity_sub {
+  font-family: 'GMarketSans';
+  font-size: 21px;
+  font-weight: 400;
+  color: #9e9e9e;
+  margin-bottom: 10px;
+}
+
+.activity_desc {
+  font-family: 'GMarketSans';
+  font-size: 21px;
+  font-weight: 400;
+  color: #9e9e9e;
+}
+
+/* RIGHT HERO IMAGE */
+.activity_top{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.activity_top img{
+  width: 490px;
+  height: 289px;
+  object-fit: cover;
+  margin-right: -30px;
+}
+
+.activity_bottom{
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 140px; /* 마지막이 파란 버튼 */
+  gap: 24px;
+  align-items: stretch;
+}
+
+.activity_bottom img {
+  width: 400px;
+  height: 339px;
+  margin-left: -30px;
+}
+
+/* NEXT BUTTON CARD */
+.activity_next{
+  border: none;
+  background: #608DFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 128px;
+  height: 339px;
+  left: -100px;
+}
+
+.activity_arrow{
+  color: #fff;
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 300;
+  transform: translateX(2px);
+}
+
+/* ===== SECTION ===== */
+.award-section{
+  width: 100%;
+  background: #fff;
+  padding: 60px 0 80px;
+}
+
+.award-wrap{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ===== LEFT ===== */
+.award-left{
+  padding-top: 30px;
+  margin-left: -30px;
+}
+
+.reward-title{
+  font-family: 'GMarketSans';
+  font-weight: 400;
+  font-size: 48px;
+  color: #608DFF;
+  margin-top: 300px;
+  margin-bottom: 50px;
+  left: -100px;
+}
+
+/* ✅ 진짜 스크롤 박스 */
+.reward-scrollArea{
+  height: 500px;          /* 🔥 여기 높이만 네 디자인에 맞게 조절 */
+  left: -100px;
+  overflow-y: auto;
+  padding-right: 12px;    /* 스크롤바랑 내용 겹치지 않게 */
+
+  /* 스크롤이 자연스럽게 */
+  overscroll-behavior: contain;
+}
+
+/* ===== TABLE ===== */
+.reward-list{
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Pretendard";
+}
+
+.reward-list th,
+.reward-list td{
+  padding: 26px 0;
+  text-align: left;
+  border-bottom: 1px solid #efefef;
+}
+
+.reward-list th{
+  font-size: 14px;
+  font-weight: 600;
+  color: #bdbdbd;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 2;
+}
+
+.reward-list td{
+  font-size: 15px;
+  color: #424242;
+}
+
+.reward-list td a{
+  color: #608DFF;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* ===== RIGHT ===== */
+.award-right{
+  position: relative;
+  min-height: 540px;
+}
+
+.award-trophy{
+  position: absolute;
+  right: -245px;   /* 🔥 오른쪽으로 삐져나오게 */
+  width: 1000px;
+  height: 1000px;
+  top: 220px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ===== 스크롤바 스타일 (크롬/엣지) ===== */
+.reward-scrollArea::-webkit-scrollbar{
+  width: 8px;
+}
+
+.reward-scrollArea::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.reward-scrollArea::-webkit-scrollbar-thumb{
+  background: #d6d6d6;
+  border-radius: 999px;
+}
+
+/* 파이어폭스 */
+.reward-scrollArea{
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d6 transparent;
+}
+
+:root{
+  --blue:#608DFF;
+}
+
+.global-title{
+  margin-top: 500px;
+  font-family:'GMarketSans';
+  font-size:48px;
+  color:#608DFF;
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.global-row{
+  position:relative;
+  z-index:5;
+  max-width: 1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  gap:90px;
+}
+
+.global-row {
+  max-width: 1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  gap:90px;
+  z-index: 3;
+}
+
+/* 카드 */
+.global-card{
+  width:320px;
+  height:320px;
+  perspective:1000px;
+}
+
+/* 원 */
+.global-circle{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  border:2px solid var(--blue);
+  position:relative;
+  overflow:hidden;
+  transition:.35s;
+}
+
+/* 앞면 (기본 흰 원) */
+.circle-front{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family:'GMarketSans';
+  font-size:32px;
+  color:var(--blue);
+
+  transition:.3s;
+}
+
+/* 뒷면 (파란 내용) */
+.circle-back{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+
+  color:#fff;
+  text-align:center;
+
+  opacity:0;
+  transform:scale(.9);
+  transition:.3s;
+}
+
+/* hover 시 원 색 변경 */
+.global-circle:hover{
+  background:var(--blue);
+  border-color:var(--blue);
+}
+
+/* hover 시 앞면 숨김 */
+.global-circle:hover .circle-front{
+  opacity:0;
+}
+
+/* hover 시 내용 등장 */
+.global-circle:hover .circle-back{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* 텍스트 */
+.back-small{
+  font-size:14px;
+  margin-bottom:10px;
+}
+
+.back-country{
+  font-size:26px;
+  font-weight:600;
+  margin-bottom:16px;
+}
+
+.back-names{
+  font-size:14px;
+  line-height:1.8;
+}
+
+:root{
+  --cardBorder: rgba(96,141,255,.75);
+}
+
+/* 섹션 */
+.member{
+  width: 100%;
+  background: #fff;
+  padding: 110px 0 120px;
+  overflow: hidden; /* ✅ 밖으로 나가는 카드 숨김 */
+}
+
+.member-title{
+  font-family: 'GMarketSans';
+  font-size: 48px;
+  font-weight: 500;
+  color: #608DFF;
+  margin-bottom: 26px;
+  margin-left: 225px;
+  margin-top: 300px;
+}
+
+/* 마퀴(가로 슬라이드) 컨테이너 */
+.member-marquee{
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 1줄/2줄 간격 */
+.member-marquee--row1{ margin-bottom: 28px; }
+.member-marquee--row2{ margin-bottom: 0; }
+
+/* 실제로 움직이는 트랙 */
+.member-track{
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+  animation: memberScroll 28s linear infinite;
+}
+
+/* 2번째 줄은 반대 방향 + 약간 느리게 (스크린샷처럼 자연스러움) */
+.member-marquee--row2 .member-track{
+  animation: memberScrollReverse 34s linear infinite;
+}
+
+/* hover하면 멈춤(원하면 삭제 가능) */
+.member-marquee:hover .member-track{
+  animation-play-state: paused;
+}
+
+.member-15th{
+  width: 570px;
+  min-height: 263px;   /* 최소만 유지 */
+  height: auto; 
+  border: 1.6px solid var(--cardBorder);
+  border-radius: 16px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 204px 1fr; /* ✅ 사진 폭과 동일 */
+  column-gap: 32px;
+  align-items: center;
+  padding: 24px 28px;              /* ✅ 카드 안 여백 예쁘게 */
+  box-shadow: 0 8px 16px rgba(0,0,0,.06); 
+}
+
+.member-16th{
+  width: 570px;
+  min-height: 263px;   /* 최소만 유지 */
+  height: auto; 
+  border: 1.6px solid var(--cardBorder);
+  border-radius: 16px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 204px 1fr; /* ✅ 사진 폭과 동일 */
+  column-gap: 32px;
+  align-items: center;
+  padding: 24px 28px;           /* ✅ 카드 안 여백 예쁘게 */
+  margin-bottom: 300px;
+  box-shadow: 0 8px 16px rgba(0,0,0,.06); 
+}
+
+.member-photo{
+  width: 204px;
+  height: 204px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member-info{
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+
+.member-role{
+  font-family: 'Pretendard';
+  font-size: 18px;
+  color: #9e9e9e;
+  margin-bottom: 6px;
+}
+
+.member-name{
+  font-family: 'Pretendard';
+  font-size: 24px;
+  font-weight: 600;
+  color: #424242;
+  margin-bottom: 6px;
+}
+
+.member-desc{
+  font-family: 'Pretendard';
+  font-size: 21px;
+  color: #424242;
+  line-height: 1.35;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* 너무 길면 2줄까지만 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.member-grade {
+  font-family: 'Pretendard';
+  font-size: 24px;
+  color: #424242;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 225px;
+}
+
+@keyframes memberScroll{
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--loopWidth))); }
+}
+
+@keyframes memberScrollReverse{
+  from { transform: translateX(calc(-1 * var(--loopWidth))); }
+  to   { transform: translateX(0); }
+}
+
+.member-15th:hover,
+.member-16th:hover {
+  background: #608DFF;
+  box-shadow: 0 10px 22px rgba(96,141,255,.18);
+  transform: translateY(-2px);
+}
+
+.member-15th:hover .member-name,
+.member-16th:hover .member-name{
+  color:#fff;
+}
+
+.member-15th:hover .member-role,
+.member-16th:hover .member-role{
+  color:#fff;
+}
+
+.member-15th:hover .member-desc,
+.member-16th:hover .member-desc{
+  color:#fff;
+}
