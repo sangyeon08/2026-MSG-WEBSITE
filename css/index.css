@@ -1,6 +1,7 @@
 .main {
     min-height: 100vh;
     padding: 0 var(--basic-padding);
+    overflow-x: hidden;
 }
 
 .content-banner {
