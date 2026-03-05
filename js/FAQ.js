@@ -12,3 +12,12 @@ function toggle(arrowId, answerId) {
         answer.style.maxHeight = "0px";
     }
 }
+
+// FAQ 푸터 링크 클릭 → 상단으로 스크롤
+const faqFooterTop = document.getElementById("faq-footer-top");
+if (faqFooterTop) {
+  faqFooterTop.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
