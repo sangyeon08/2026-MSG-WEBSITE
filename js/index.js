@@ -298,3 +298,22 @@ if (footerMember) {
     }
   });
 }
+
+// FAQ에서 넘어온 경우 오프셋이 적용된 스크롤 처리
+window.addEventListener("load", () => {
+  const scrollTarget = sessionStorage.getItem("scrollTarget");
+  const scrollOffset = sessionStorage.getItem("scrollOffset");
+  
+  if (scrollTarget && scrollOffset) {
+    const section = document.getElementById(scrollTarget);
+    if (section) {
+      setTimeout(() => {
+        const offsetY = section.offsetTop - parseInt(scrollOffset);
+        window.scrollTo({ top: offsetY, behavior: "smooth" });
+      }, 100);
+    }
+    // 사용 후 sessionStorage 초기화
+    sessionStorage.removeItem("scrollTarget");
+    sessionStorage.removeItem("scrollOffset");
+  }
+});
